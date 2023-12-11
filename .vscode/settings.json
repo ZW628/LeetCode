@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "*clang-format*": "yaml",
+        "vector": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "unordered_map": "cpp",
+        "stack": "cpp",
+        "queue": "cpp",
+        "algorithm": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "new": "cpp",
+        "set": "cpp",
+        "unordered_set": "cpp",
+        "string": "cpp",
+        "deque": "cpp"
+    }
+}
