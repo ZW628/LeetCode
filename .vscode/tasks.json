@@ -9,6 +9,8 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                "-I",    // 如果头文件和代码文件不在同一个目录下，增加此代码，-I 表示向编译器指定头文件地址。
+                "E:\\LeetCode\\include", // 设置为自己要引用头文件所在的目录
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
