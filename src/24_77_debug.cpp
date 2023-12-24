@@ -3,20 +3,33 @@
 
 using namespace std;
 
-// 组合
 class Solution {
 private:
     vector<vector<int>> result; // 存放符合条件结果的集合
     vector<int> path;           // 用来存放符合条件结果
-
     void backtracking(int n, int k, int startIndex) {
         if (path.size() == k) {
             result.push_back(path);
         }
         for (int i = startIndex; i <= n; i++) {
-            path.push_back(i);         // 处理节点
+            cout << "startIndex: " << startIndex << endl; // debug
+            cout << "i: " << i << endl;
+            path.push_back(i); // 处理节点
+
+            cout << "path.push_back: "; // debug
+            for (int i = 0; i < path.size(); i++) {
+                cout << path[i];
+            }
+            cout << endl;
+
             backtracking(n, k, i + 1); // 递归
             path.pop_back();           // 回溯，撤销处理的节点
+
+            cout << "path.pop_back: "; // debug
+            for (int i = 0; i < path.size(); i++) {
+                cout << path[i];
+            }
+            cout << endl;
         }
     }
 
@@ -44,10 +57,7 @@ int main() {
                 cout << ",";
             }
         }
-        cout << "]";
-        if (&level != &result.back()) {
-            cout << ",";
-        }
+        cout << "],";
     }
     cout << "]" << endl;
 
