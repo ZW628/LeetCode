@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+// 背包问题 二维
 void test_2_wei_bag_problem1() {
     vector<int> weight = {1, 3, 4};
     vector<int> value = {15, 20, 30};
