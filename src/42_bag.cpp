@@ -17,8 +17,8 @@ void test_2_wei_bag_problem1() {
     }
 
     // weight数组的大小 就是物品个数
-    for (int i = 1; i < weight.size(); i++) {  // 遍历物品
-        for (int j = 0; j <= bagweight; j++) { // 遍历背包容量
+    for (int i = 1; i < weight.size(); i++) {  //  遍历物品
+        for (int j = 0; j <= bagweight; j++) { //  遍历背包容量
             if (j < weight[i])
                 dp[i][j] = dp[i - 1][j];
             else

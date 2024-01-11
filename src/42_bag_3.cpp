@@ -10,8 +10,8 @@ void test_1_wei_bag_problem() {
 
     // 初始化
     vector<int> dp(bagWeight + 1, 0);
-    for (int i = 0; i < weight.size(); i++) {          // 遍历物品
-        for (int j = bagWeight; j >= weight[i]; j--) { // 遍历背包容量
+    for (int i = 0; i < weight.size(); i++) {          //  遍历物品
+        for (int j = bagWeight; j >= weight[i]; j--) { //  遍历背包容量
             dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);
         }
     }

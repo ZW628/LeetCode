@@ -23,8 +23,8 @@ void solve() {
         dp[0][j] = value[0];
     }
 
-    for (int i = 1; i < weight.size(); i++) {  // 遍历科研物品
-        for (int j = 0; j <= bagweight; j++) { // 遍历行李箱容量
+    for (int i = 1; i < weight.size(); i++) {  //  遍历科研物品
+        for (int j = 0; j <= bagweight; j++) { //  遍历行李箱容量
             // 如果装不下这个物品,那么就继承dp[i - 1][j]的值
             if (j < weight[i]) dp[i][j] = dp[i - 1][j];
             // 如果能装下,就将值更新为 不装这个物品的最大值 和 装这个物品的最大值 中的 最大值
