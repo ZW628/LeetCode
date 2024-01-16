@@ -2,8 +2,9 @@
 #include <vector>
 using namespace std;
 
-// 时间复杂度：O(n^2)
-// 空间复杂度：O(1)
+//  暴力解法
+//  时间复杂度：O(n^2)
+//  空间复杂度：O(1)
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
