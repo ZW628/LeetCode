@@ -4,24 +4,26 @@
 #include "ListNode.h"
 using namespace std;
 
+// 移除链表元素
 // 直接使用原来的链表来进行移除节点操作
 class Solution {
 public:
-    ListNode* removeElements(ListNode* head, int val) {
-        // 删除头结点
-        while (head != NULL && head->val == val) { // 注意这里不是if
-            ListNode* tmp = head;
+    ListNode* removeElements(ListNode* head, int removal) {
+        // 删除头节点
+        // 使用 while 而不是 if 的原因在于可能需要连续删除链表头部的多个值相同的节点
+        while (head != NULL && head->val == removal) {
+            ListNode* temp = head;
             head = head->next;
-            delete tmp;
+            delete temp;
         }
 
-        // 删除非头结点
+        // 删除非头节点
         ListNode* cur = head;
         while (cur != NULL && cur->next != NULL) {
-            if (cur->next->val == val) {
-                ListNode* tmp = cur->next;
+            if (cur->next->val == removal) {
+                ListNode* temp = cur->next;
                 cur->next = cur->next->next;
-                delete tmp;
+                delete temp;
             } else {
                 cur = cur->next;
             }
