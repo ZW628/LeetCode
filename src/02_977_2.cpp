@@ -3,13 +3,14 @@
 #include <vector>
 using namespace std;
 
+// 有序数组的平方
 // 双指针法
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& A) {
         int k = A.size() - 1;
         vector<int> result(A.size(), 0);
-        for (int i = 0, j = A.size() - 1; i <= j;) { // 注意这里要i <= j，因为最后要处理两个元素
+        for (int i = 0, j = A.size() - 1; i <= j;) {
             if (A[i] * A[i] < A[j] * A[j]) {
                 result[k--] = A[j] * A[j];
                 j--;
