@@ -5,7 +5,7 @@
 using namespace std;
 
 // 移除链表元素
-// 设置一个虚拟头结点在进行移除节点操作
+// 设置一个虚拟头结点再进行移除节点操作
 class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
