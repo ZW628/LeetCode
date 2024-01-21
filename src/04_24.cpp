@@ -16,7 +16,7 @@ public:
 
             cur->next = cur->next->next;  // 步骤一
             cur->next->next = tmp;        // 步骤二
-            cur->next->next->next = tmp1; // 步骤三
+            cur->next->next->next = tmp1; // 步骤三 cur->next->next现为1,这步是1指向3
 
             cur = cur->next->next; // cur移动两位，准备下一轮交换
         }
