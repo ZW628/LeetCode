@@ -36,7 +36,8 @@ int main() {
 
     // 输出结果
     cout << "[";
-    for (vector<int> level : result) {
+    for (auto it = result.begin(); it != result.end(); ++it) {
+        vector<int>& level = *it;
         cout << "[";
         for (int i = 0; i < level.size(); i++) {
             cout << level[i];
@@ -45,7 +46,9 @@ int main() {
             }
         }
         cout << "]";
-        if (&level != &result.back()) {
+
+        // 使用迭代器判断是否为最后一个元素
+        if (it + 1 != result.end()) {
             cout << ",";
         }
     }
