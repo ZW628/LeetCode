@@ -23,6 +23,7 @@ private:
 public:
     vector<string> result;
     string s;
+
     void backtracking(const string& digits, int index) {
         if (index == digits.size()) {
             result.push_back(s);
@@ -36,6 +37,7 @@ public:
             s.pop_back();                    // 回溯
         }
     }
+
     vector<string> letterCombinations(string digits) {
         s.clear();
         result.clear();

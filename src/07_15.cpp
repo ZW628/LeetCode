@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// 三数之和
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
@@ -55,3 +56,19 @@ public:
         return result;
     }
 };
+
+int main() {
+    Solution solution;
+    vector<int> nums = {-1, -1, 2};
+
+    vector<vector<int>> res = solution.threeSum(nums);
+
+    for (auto const level : res) {
+        for (int i = 0; i < level.size(); i++) {
+            cout << level[i];
+        }
+    }
+
+    cin.get();
+    return 0;
+}
