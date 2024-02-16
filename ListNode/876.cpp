@@ -3,6 +3,7 @@
 #include "ListNode.h"
 using namespace std;
 
+// 链表的中间节点
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
